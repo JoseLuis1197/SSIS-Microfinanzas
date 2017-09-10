@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{0B71BE91-623D-408B-BD64-4C9ACC947752}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{E2D62D86-3268-43AD-B1AD-3E2F8AAADF28}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1611,15 +1611,15 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">true</property>
+                  name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -3736,6 +3736,337 @@
                       cachedName="igrupo"
                       externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[igrupo]"
                       lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[igrupo]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidexpediente]"
+                      cachedDataType="i4"
+                      cachedName="iidexpediente"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidexpediente]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidexpediente]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidcanal]"
+                      cachedDataType="i4"
+                      cachedName="iidcanal"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidcanal]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidcanal]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidmodelo]"
+                      cachedDataType="i4"
+                      cachedName="iidmodelo"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidmodelo]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidmodelo]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidproducto]"
+                      cachedDataType="i4"
+                      cachedName="iidproducto"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidproducto]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidproducto]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[vnrosolicitud]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="vnrosolicitud"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vnrosolicitud]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[vnrosolicitud]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[itiporechazo]"
+                      cachedDataType="i4"
+                      cachedName="itiporechazo"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[itiporechazo]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[itiporechazo]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[itipomoneda]"
+                      cachedDataType="i4"
+                      cachedName="itipomoneda"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[itipomoneda]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[itipomoneda]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcmontosolicitado]"
+                      cachedDataType="r8"
+                      cachedName="dcmontosolicitado"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcmontosolicitado]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcmontosolicitado]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iplazosolicitado]"
+                      cachedDataType="i4"
+                      cachedName="iplazosolicitado"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iplazosolicitado]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iplazosolicitado]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcmontoaprobado]"
+                      cachedDataType="r8"
+                      cachedName="dcmontoaprobado"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcmontoaprobado]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcmontoaprobado]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iplazoaprobado]"
+                      cachedDataType="i4"
+                      cachedName="iplazoaprobado"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iplazoaprobado]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iplazoaprobado]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dctasaaprobado]"
+                      cachedDataType="r8"
+                      cachedName="dctasaaprobado"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dctasaaprobado]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dctasaaprobado]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dctasamoratoria]"
+                      cachedDataType="r8"
+                      cachedName="dctasamoratoria"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dctasamoratoria]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dctasamoratoria]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dccuotaaprobado]"
+                      cachedDataType="r8"
+                      cachedName="dccuotaaprobado"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dccuotaaprobado]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dccuotaaprobado]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcmontoaprobadoneto]"
+                      cachedDataType="r8"
+                      cachedName="dcmontoaprobadoneto"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcmontoaprobadoneto]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcmontoaprobadoneto]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[itipoetapaexpsol]"
+                      cachedDataType="i4"
+                      cachedName="itipoetapaexpsol"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[itipoetapaexpsol]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[itipoetapaexpsol]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dfecetapaexpsol]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="dfecetapaexpsol"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dfecetapaexpsol]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dfecetapaexpsol]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[itipobloqueo]"
+                      cachedDataType="i4"
+                      cachedName="itipobloqueo"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[itipobloqueo]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[itipobloqueo]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidempadmin]"
+                      cachedDataType="i4"
+                      cachedName="iidempadmin"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidempadmin]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidempadmin]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dFecPrimerVenc]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="dFecPrimerVenc"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dFecPrimerVenc]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dFecPrimerVenc]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iFrecPagoAprob]"
+                      cachedDataType="i4"
+                      cachedName="iFrecPagoAprob"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iFrecPagoAprob]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iFrecPagoAprob]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iTipoTermPagoAprob]"
+                      cachedDataType="i4"
+                      cachedName="iTipoTermPagoAprob"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iTipoTermPagoAprob]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iTipoTermPagoAprob]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[vIBSIDCredito]"
+                      cachedDataType="r8"
+                      cachedName="vIBSIDCredito"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vIBSIDCredito]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[vIBSIDCredito]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iTipoDesembolso]"
+                      cachedDataType="i4"
+                      cachedName="iTipoDesembolso"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iTipoDesembolso]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iTipoDesembolso]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tBeneficiarioCheque]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="tBeneficiarioCheque"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tBeneficiarioCheque]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[tBeneficiarioCheque]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[vCuentaAbono]"
+                      cachedDataType="r8"
+                      cachedName="vCuentaAbono"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vCuentaAbono]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[vCuentaAbono]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iDiaDePago]"
+                      cachedDataType="i4"
+                      cachedName="iDiaDePago"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iDiaDePago]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iDiaDePago]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iTipSitSolicitud]"
+                      cachedDataType="i4"
+                      cachedName="iTipSitSolicitud"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iTipSitSolicitud]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iTipSitSolicitud]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iIDAgencia]"
+                      cachedDataType="i4"
+                      cachedName="iIDAgencia"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iIDAgencia]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iIDAgencia]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iIDPagare]"
+                      cachedDataType="i4"
+                      cachedName="iIDPagare"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iIDPagare]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iIDPagare]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcMontoComMes]"
+                      cachedDataType="r8"
+                      cachedName="dcMontoComMes"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcMontoComMes]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcMontoComMes]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidusualt]"
+                      cachedDataType="i4"
+                      cachedName="iidusualt"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidusualt]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidusualt]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidusumod]"
+                      cachedDataType="i4"
+                      cachedName="iidusumod"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidusumod]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidusumod]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cstatus]"
+                      cachedDataType="r8"
+                      cachedName="cstatus"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cstatus]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[cstatus]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cflprodnue]"
+                      cachedDataType="r8"
+                      cachedName="cflprodnue"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cflprodnue]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[cflprodnue]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcSegMult]"
+                      cachedDataType="r8"
+                      cachedName="dcSegMult"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcSegMult]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcSegMult]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcSegDes]"
+                      cachedDataType="r8"
+                      cachedName="dcSegDes"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcSegDes]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcSegDes]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iplazopago]"
+                      cachedDataType="i4"
+                      cachedName="iplazopago"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iplazopago]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iplazopago]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iIDAgenciaDesemb]"
+                      cachedDataType="i4"
+                      cachedName="iIDAgenciaDesemb"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iIDAgenciaDesemb]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iIDAgenciaDesemb]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dctarSegMult]"
+                      cachedDataType="r8"
+                      cachedName="dctarSegMult"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dctarSegMult]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dctarSegMult]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcCuotaIniRef]"
+                      cachedDataType="r8"
+                      cachedName="dcCuotaIniRef"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcCuotaIniRef]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcCuotaIniRef]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcLiqRefinan]"
+                      cachedDataType="r8"
+                      cachedName="dcLiqRefinan"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcLiqRefinan]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcLiqRefinan]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iidConcesionario]"
+                      cachedDataType="r8"
+                      cachedName="iidConcesionario"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iidConcesionario]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iidConcesionario]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcSegVehic]"
+                      cachedDataType="r8"
+                      cachedName="dcSegVehic"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcSegVehic]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcSegVehic]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcTarSegVehic]"
+                      cachedDataType="r8"
+                      cachedName="dcTarSegVehic"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcTarSegVehic]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcTarSegVehic]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[igastosprev]"
+                      cachedDataType="r8"
+                      cachedName="igastosprev"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[igastosprev]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[igastosprev]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcGastosPrev]"
+                      cachedDataType="r8"
+                      cachedName="dcGastosPrev"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcGastosPrev]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcGastosPrev]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[iTipoSegDes]"
+                      cachedDataType="r8"
+                      cachedName="iTipoSegDes"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iTipoSegDes]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[iTipoSegDes]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcSegTdoRsg]"
+                      cachedDataType="r8"
+                      cachedName="dcSegTdoRsg"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcSegTdoRsg]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcSegTdoRsg]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dctarSegTdoRsg]"
+                      cachedDataType="r8"
+                      cachedName="dctarSegTdoRsg"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dctarSegTdoRsg]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dctarSegTdoRsg]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcMontoVehic]"
+                      cachedDataType="r8"
+                      cachedName="dcMontoVehic"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcMontoVehic]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcMontoVehic]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcMontoVehicFinan]"
+                      cachedDataType="r8"
+                      cachedName="dcMontoVehicFinan"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcMontoVehicFinan]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcMontoVehicFinan]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcMontoCuotaInicial]"
+                      cachedDataType="r8"
+                      cachedName="dcMontoCuotaInicial"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcMontoCuotaInicial]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcMontoCuotaInicial]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcExcedenteFamiliar]"
+                      cachedDataType="r8"
+                      cachedName="dcExcedenteFamiliar"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcExcedenteFamiliar]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcExcedenteFamiliar]" />
+                    <inputColumn
+                      refId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dcCuotaExcedente]"
+                      cachedDataType="r8"
+                      cachedName="dcCuotaExcedente"
+                      externalMetadataColumnId="Package\Carga TM_ExpsSol\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dcCuotaExcedente]"
+                      lineageId="Package\Carga TM_ExpsSol\OLE DB Source.Outputs[OLE DB Source Output].Columns[dcCuotaExcedente]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -11020,21 +11351,6 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Fin de carga"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{E424E58C-F6E7-451C-B565-B1C4A8BFB68D}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Fin de carga"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Inicio"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -11091,14 +11407,6 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 12"
       DTS:To="Package\Carga TM_Persona" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
-      DTS:CreationName=""
-      DTS:DTSID="{34D10FAB-88EF-470D-8E1D-CB97A1CC8BEE}"
-      DTS:From="Package\Carga TM_Credito"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 13"
-      DTS:To="Package\Fin de carga" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -11177,53 +11485,49 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
+          Size="151,47"
           Id="Package\Carga TD_ASOCEXPSOL"
-          TopLeft="784.722222222222,175" />
+          TopLeft="753.611111111111,155" />
         <NodeLayout
           Size="151,42"
           Id="Package\Carga TM_Agencia"
-          TopLeft="564.027777777777,324.027777777777" />
+          TopLeft="619.583333333333,302.916666666666" />
         <NodeLayout
           Size="164,42"
           Id="Package\Carga TM_Credito"
-          TopLeft="552.222222222222,473.333333333333" />
+          TopLeft="604.444444444444,436.666666666667" />
         <NodeLayout
           Size="166,42"
           Id="Package\Carga TM_ExpsSol"
-          TopLeft="551.66666666667,398.194444444444" />
+          TopLeft="610.555555555559,371.527777777778" />
         <NodeLayout
           Size="164,42"
           Id="Package\Carga TM_Modelo"
-          TopLeft="314.416666666667,166.75" />
+          TopLeft="342.194444444445,152.305555555556" />
         <NodeLayout
           Size="167,42"
           Id="Package\Carga TM_Persona"
-          TopLeft="553.611111111111,102.194444444444" />
+          TopLeft="539.166666666667,88.8611111111108" />
         <NodeLayout
           Size="204,42"
           Id="Package\Carga Tm_PersonaJuridica"
-          TopLeft="532.055555555555,239.234126984127" />
+          TopLeft="576.5,221.456349206349" />
         <NodeLayout
           Size="202,42"
           Id="Package\Carga TM_PersonaNatural"
-          TopLeft="537.972222222223,173.861111111111" />
+          TopLeft="529.083333333334,153.861111111111" />
         <NodeLayout
           Size="172,42"
           Id="Package\Carga TM_Producto"
-          TopLeft="311.166666666667,97.25" />
+          TopLeft="338.944444444445,82.8055555555556" />
         <NodeLayout
           Size="226,42"
           Id="Package\Carga TM_PRODUCTOMODELO"
-          TopLeft="285.166666666667,245.666666666667" />
+          TopLeft="307.388888888889,223.444444444445" />
         <NodeLayout
           Size="179,42"
           Id="Package\Carga TP_Descriptivo"
-          TopLeft="772.083333333337,98.0555555555556" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Fin de carga"
-          TopLeft="559.472222222223,544.5" />
+          TopLeft="734.305555555559,86.9444444444445" />
         <NodeLayout
           Size="105,42"
           Id="Package\Inicio"
@@ -11234,26 +11538,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-215.5,39.25"
+              EndConnector="-187.722222222222,24.8055555555556"
               Start="0,0"
-              End="-215.5,31.75">
+              End="-187.722222222222,17.3055555555556">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.73142414860681" />
+                    End="0,4.6781045751634" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.73142414860681"
-                    Point2="0,13.7314241486068"
-                    Point3="-4,13.7314241486068" />
+                    Point1="0,4.6781045751634"
+                    Point2="0,8.6781045751634"
+                    Point3="-4,8.6781045751634" />
                   <mssgle:LineSegment
-                    End="-211.5,13.7314241486068" />
+                    End="-183.722222222222,8.6781045751634" />
                   <mssgle:CubicBezierSegment
-                    Point1="-211.5,13.7314241486068"
-                    Point2="-215.5,13.7314241486068"
-                    Point3="-215.5,17.7314241486068" />
+                    Point1="-183.722222222222,8.6781045751634"
+                    Point2="-187.722222222222,8.6781045751634"
+                    Point3="-187.722222222222,12.6781045751634" />
                   <mssgle:LineSegment
-                    End="-215.5,31.75" />
+                    End="-187.722222222222,17.3055555555556" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11264,18 +11568,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="396.791666666667,139.25">
+          TopLeft="424.569444444445,124.805555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27.5"
+              EndConnector="0,27.4999999999999"
               Start="0,0"
-              End="0,20">
+              End="0,19.9999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20" />
+                    End="0,19.9999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11286,18 +11590,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="637.013888888889,58">
+          TopLeft="621.708333333333,58">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.1944444444441"
+              EndConnector="0,30.8611111111108"
               Start="0,0"
-              End="0,36.6944444444441">
+              End="0,23.3611111111108">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.6944444444441" />
+                    End="0,23.3611111111108" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11308,18 +11612,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="397.291666666667,208.75">
+          TopLeft="422.291666666667,194.305555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.9166666666667"
+              EndConnector="0,29.1388888888892"
               Start="0,0"
-              End="0,29.4166666666667">
+              End="0,21.6388888888892">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.4166666666667" />
+                    End="0,21.6388888888892" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11330,18 +11634,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="638.041666666667,144.194444444444">
+          TopLeft="626.375,130.861111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29.666666666667"
+              EndConnector="0,23.0000000000003"
               Start="0,0"
-              End="0,22.166666666667">
+              End="0,15.5000000000003">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.166666666667" />
+                    End="0,15.5000000000003" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11352,18 +11656,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="636.513888888889,215.861111111111">
+          TopLeft="630.083333333334,195.861111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23.3730158730159"
+              EndConnector="48.4166666666662,25.5952380952382"
               Start="0,0"
-              End="0,15.8730158730159">
+              End="48.4166666666662,18.0952380952382">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.8730158730159" />
+                    End="0,8.79761904761909" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.79761904761909"
+                    Point2="0,12.7976190476191"
+                    Point3="4,12.7976190476191" />
+                  <mssgle:LineSegment
+                    End="44.4166666666662,12.7976190476191" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.4166666666662,12.7976190476191"
+                    Point2="48.4166666666662,12.7976190476191"
+                    Point3="48.4166666666662,16.7976190476191" />
+                  <mssgle:LineSegment
+                    End="48.4166666666662,18.0952380952382" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11378,26 +11694,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="208.500000000003,40.0555555555556"
+              EndConnector="170.722222222225,28.9444444444445"
               Start="0,0"
-              End="208.500000000003,32.5555555555556">
+              End="170.722222222225,21.4444444444445">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.3829476756306" />
+                    End="0,7.83844069209925" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.3829476756306"
-                    Point2="0,16.3829476756306"
-                    Point3="4,16.3829476756306" />
+                    Point1="0,7.83844069209925"
+                    Point2="0,11.8384406920993"
+                    Point3="4,11.8384406920993" />
                   <mssgle:LineSegment
-                    End="204.500000000003,16.3829476756306" />
+                    End="166.722222222225,11.8384406920993" />
                   <mssgle:CubicBezierSegment
-                    Point1="204.500000000003,16.3829476756306"
-                    Point2="208.500000000003,16.3829476756306"
-                    Point3="208.500000000003,20.3829476756306" />
+                    Point1="166.722222222225,11.8384406920993"
+                    Point2="170.722222222225,11.8384406920993"
+                    Point3="170.722222222225,15.8384406920993" />
                   <mssgle:LineSegment
-                    End="208.500000000003,32.5555555555556" />
+                    End="170.722222222225,21.4444444444445" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11408,18 +11724,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="860.902777777779,140.055555555556">
+          TopLeft="826.458333333335,128.944444444444">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.9444444444447"
+              EndConnector="0,26.0555555555559"
               Start="0,0"
-              End="0,27.4444444444447">
+              End="0,18.5555555555559">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.4444444444447" />
+                    End="0,18.5555555555559" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11430,30 +11746,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="398.166666666667,287.666666666667">
+          TopLeft="420.388888888889,265.444444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="205.61111111111,36.3611111111105"
+              EndConnector="238.944444444443,37.4722222222215"
               Start="0,0"
-              End="205.61111111111,28.8611111111105">
+              End="238.944444444443,29.9722222222215">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.8200771270181" />
+                    End="0,20.5479633646657" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.8200771270181"
-                    Point2="0,23.8200771270181"
-                    Point3="4,23.8200771270181" />
+                    Point1="0,20.5479633646657"
+                    Point2="0,24.5479633646657"
+                    Point3="4,24.5479633646657" />
                   <mssgle:LineSegment
-                    End="201.61111111111,23.8200771270181" />
+                    End="234.944444444443,24.5479633646657" />
                   <mssgle:CubicBezierSegment
-                    Point1="201.61111111111,23.8200771270181"
-                    Point2="205.61111111111,23.8200771270181"
-                    Point3="205.61111111111,27.8200771270181" />
+                    Point1="234.944444444443,24.5479633646657"
+                    Point2="238.944444444443,24.5479633646657"
+                    Point3="238.944444444443,28.5479633646657" />
                   <mssgle:LineSegment
-                    End="205.61111111111,28.8611111111105" />
+                    End="238.944444444443,29.9722222222215" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11464,18 +11780,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="636.791666666666,281.234126984127">
+          TopLeft="678.5,263.456349206349">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.7936507936504"
+              EndConnector="16.5833333333328,39.460317460317"
               Start="0,0"
-              End="0,35.2936507936504">
+              End="16.5833333333328,31.960317460317">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.2936507936504" />
+                    End="0,15.7301587301585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.7301587301585"
+                    Point2="0,19.7301587301585"
+                    Point3="4,19.7301587301585" />
+                  <mssgle:LineSegment
+                    End="12.5833333333328,19.7301587301585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5833333333328,19.7301587301585"
+                    Point2="16.5833333333328,19.7301587301585"
+                    Point3="16.5833333333328,23.7301587301585" />
+                  <mssgle:LineSegment
+                    End="16.5833333333328,31.960317460317" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11486,30 +11814,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="860.222222222222,217">
+          TopLeft="829.111111111111,202">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-184.944444444444,107.027777777777"
+              EndConnector="-98.2777777777778,100.916666666666"
               Start="0,0"
-              End="-184.944444444444,99.5277777777771">
+              End="-98.2777777777778,93.4166666666659">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,66.1136418414071" />
+                    End="0,62.1102675343451" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,66.1136418414071"
-                    Point2="0,70.1136418414071"
-                    Point3="-4,70.1136418414071" />
+                    Point1="0,62.1102675343451"
+                    Point2="0,66.1102675343451"
+                    Point3="-4,66.1102675343451" />
                   <mssgle:LineSegment
-                    End="-180.944444444444,70.1136418414071" />
+                    End="-94.2777777777778,66.1102675343451" />
                   <mssgle:CubicBezierSegment
-                    Point1="-180.944444444444,70.1136418414071"
-                    Point2="-184.944444444444,70.1136418414071"
-                    Point3="-184.944444444444,74.1136418414071" />
+                    Point1="-94.2777777777778,66.1102675343451"
+                    Point2="-98.2777777777778,66.1102675343451"
+                    Point3="-98.2777777777778,70.1102675343451" />
                   <mssgle:LineSegment
-                    End="-184.944444444444,99.5277777777771" />
+                    End="-98.2777777777778,93.4166666666659" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11520,18 +11848,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="637.097222222224,366.027777777777">
+          TopLeft="694.319444444446,344.916666666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.166666666667"
+              EndConnector="0,26.6111111111115"
               Start="0,0"
-              End="0,24.666666666667">
+              End="0,19.1111111111115">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.666666666667" />
+                    End="0,19.1111111111115" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11542,40 +11870,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="634.444444444446,440.194444444444">
+          TopLeft="690.000000000002,413.527777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.138888888889"
+              EndConnector="0,23.1388888888891"
               Start="0,0"
-              End="0,25.638888888889">
+              End="0,15.6388888888891">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.638888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="634.597222222222,515.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29.1666666666665"
-              Start="0,0"
-              End="0,21.6666666666665">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.6666666666665" />
+                    End="0,15.6388888888891" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11721,7 +12027,7 @@
     design-time-name="Package\Carga TM_Credito">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Carga TM_Credito\OLE DB Source"
@@ -11729,29 +12035,27 @@
         <NodeLayout
           Size="171,42"
           Id="Package\Carga TM_Credito\OLE DB Destination"
-          TopLeft="240,143" />
+          TopLeft="235,105" />
         <EdgeLayout
           Id="Package\Carga TM_Credito.Paths[OLE DB Source Output]"
-          TopLeft="321.75,78">
+          TopLeft="319.25,78">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65"
+              EndConnector="0,27"
               Start="0,0"
-              End="0,57.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,57.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12115,7 +12419,7 @@
     design-time-name="Package\Carga TM_Producto">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Carga TM_Producto\OLE DB Source"
@@ -12143,9 +12447,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
