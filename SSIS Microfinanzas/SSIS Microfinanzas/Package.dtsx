@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{E2D62D86-3268-43AD-B1AD-3E2F8AAADF28}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{5B2BD427-D915-4505-9B9D-4BF0B2705B5F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\JOSE LUIS\Google Drive\Tesina\Ubigeo.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\JOSE LUIS\Google Drive\Tesina\Ubigeo.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -625,12 +625,6 @@
                       cachedName="Dirección"
                       lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[Dirección]" />
                     <inputColumn
-                      refId="Package\Carga TM_Agencia\Data Conversion.Inputs[Data Conversion Input].Columns[GRUPO ZONA]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="GRUPO ZONA"
-                      lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[GRUPO ZONA]" />
-                    <inputColumn
                       refId="Package\Carga TM_Agencia\Data Conversion.Inputs[Data Conversion Input].Columns[TERRITORIO]"
                       cachedDataType="wstr"
                       cachedLength="255"
@@ -654,6 +648,12 @@
                       cachedLength="255"
                       cachedName="DEPARTAMENTO"
                       lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Carga TM_Agencia\Data Conversion.Inputs[Data Conversion Input].Columns[PAIS]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PAIS"
+                      lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[PAIS]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -829,27 +829,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GRUPO ZONA]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="100"
-                      lineageId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GRUPO ZONA]"
-                      name="Copy of GRUPO ZONA"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[GRUPO ZONA]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TERRITORIO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -927,6 +906,27 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[DEPARTAMENTO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PAIS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PAIS]"
+                      name="Copy of PAIS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[PAIS]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1089,16 +1089,6 @@
                       name="Dirección"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[GRUPO ZONA]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].ExternalColumns[GRUPO ZONA]"
-                      length="255"
-                      lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[GRUPO ZONA]"
-                      name="GRUPO ZONA"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[TERRITORIO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -1137,6 +1127,16 @@
                       length="255"
                       lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[DEPARTAMENTO]"
                       name="DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[PAIS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].ExternalColumns[PAIS]"
+                      length="255"
+                      lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].Columns[PAIS]"
+                      name="PAIS"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1177,11 +1177,6 @@
                       length="255"
                       name="Dirección" />
                     <externalMetadataColumn
-                      refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].ExternalColumns[GRUPO ZONA]"
-                      dataType="wstr"
-                      length="255"
-                      name="GRUPO ZONA" />
-                    <externalMetadataColumn
                       refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].ExternalColumns[TERRITORIO]"
                       dataType="wstr"
                       length="255"
@@ -1201,6 +1196,11 @@
                       dataType="wstr"
                       length="255"
                       name="DEPARTAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Output].ExternalColumns[PAIS]"
+                      dataType="wstr"
+                      length="255"
+                      name="PAIS" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1252,11 +1252,11 @@
                       lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Error Output].Columns[Dirección]"
                       name="Dirección" />
                     <outputColumn
-                      refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Error Output].Columns[GRUPO ZONA]"
+                      refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Error Output].Columns[PAIS]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Error Output].Columns[GRUPO ZONA]"
-                      name="GRUPO ZONA" />
+                      lineageId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Error Output].Columns[PAIS]"
+                      name="PAIS" />
                     <outputColumn
                       refId="Package\Carga TM_Agencia\Excel Source.Outputs[Excel Source Error Output].Columns[TERRITORIO]"
                       dataType="wstr"
@@ -1431,13 +1431,6 @@
                       externalMetadataColumnId="Package\Carga TM_Agencia\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vDepartamento]"
                       lineageId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DEPARTAMENTO]" />
                     <inputColumn
-                      refId="Package\Carga TM_Agencia\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of GRUPO ZONA]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Copy of GRUPO ZONA"
-                      externalMetadataColumnId="Package\Carga TM_Agencia\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vGrupoZona]"
-                      lineageId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GRUPO ZONA]" />
-                    <inputColumn
                       refId="Package\Carga TM_Agencia\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of TERRITORIO]"
                       cachedDataType="wstr"
                       cachedLength="100"
@@ -1450,6 +1443,13 @@
                       cachedName="Copy of cStatus"
                       externalMetadataColumnId="Package\Carga TM_Agencia\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cStatus]"
                       lineageId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cStatus]" />
+                    <inputColumn
+                      refId="Package\Carga TM_Agencia\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PAIS]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Copy of PAIS"
+                      externalMetadataColumnId="Package\Carga TM_Agencia\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[vGrupoZona]"
+                      lineageId="Package\Carga TM_Agencia\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PAIS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -11589,6 +11589,50 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="694.319444444446,344.916666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.6111111111115"
+              Start="0,0"
+              End="0,19.1111111111115">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.1111111111115" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="690.000000000002,413.527777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.1388888888891"
+              Start="0,0"
+              End="0,15.6388888888891">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.6388888888891" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 12]"
           TopLeft="621.708333333333,58">
           <EdgeLayout.Curve>
@@ -11624,6 +11668,40 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,21.6388888888892" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="420.388888888889,265.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="238.944444444443,37.4722222222215"
+              Start="0,0"
+              End="238.944444444443,29.9722222222215">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5479633646657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5479633646657"
+                    Point2="0,24.5479633646657"
+                    Point3="4,24.5479633646657" />
+                  <mssgle:LineSegment
+                    End="234.944444444443,24.5479633646657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="234.944444444443,24.5479633646657"
+                    Point2="238.944444444443,24.5479633646657"
+                    Point3="238.944444444443,28.5479633646657" />
+                  <mssgle:LineSegment
+                    End="238.944444444443,29.9722222222215" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11745,40 +11823,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="420.388888888889,265.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="238.944444444443,37.4722222222215"
-              Start="0,0"
-              End="238.944444444443,29.9722222222215">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5479633646657" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5479633646657"
-                    Point2="0,24.5479633646657"
-                    Point3="4,24.5479633646657" />
-                  <mssgle:LineSegment
-                    End="234.944444444443,24.5479633646657" />
-                  <mssgle:CubicBezierSegment
-                    Point1="234.944444444443,24.5479633646657"
-                    Point2="238.944444444443,24.5479633646657"
-                    Point3="238.944444444443,28.5479633646657" />
-                  <mssgle:LineSegment
-                    End="238.944444444443,29.9722222222215" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
           TopLeft="678.5,263.456349206349">
           <EdgeLayout.Curve>
@@ -11838,50 +11882,6 @@
                     Point3="-98.2777777777778,70.1102675343451" />
                   <mssgle:LineSegment
                     End="-98.2777777777778,93.4166666666659" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="694.319444444446,344.916666666666">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.6111111111115"
-              Start="0,0"
-              End="0,19.1111111111115">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.1111111111115" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="690.000000000002,413.527777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23.1388888888891"
-              Start="0,0"
-              End="0,15.6388888888891">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.6388888888891" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11972,28 +11972,6 @@
           Size="156,42"
           Id="Package\Carga TM_Agencia\Data Conversion"
           TopLeft="186,121" />
-        <EdgeLayout
-          Id="Package\Carga TM_Agencia.Paths[Excel Source Output]"
-          TopLeft="265.75,92">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="171,42"
           Id="Package\Carga TM_Agencia\OLE DB Destination"
@@ -12020,9 +11998,57 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga TM_Agencia.Paths[Excel Source Output]"
+          TopLeft="265.75,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga TM_Agencia\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga TM_Agencia\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Carga TM_Credito">
     <LayoutInfo>
@@ -12600,32 +12626,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Carga TP_Descriptivo\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga TM_Agencia\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga TM_Agencia\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
